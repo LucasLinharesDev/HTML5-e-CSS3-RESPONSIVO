@@ -1,0 +1,390 @@
+*{
+    font-family:Arial;
+    font-size:13px;
+}
+body{
+    /*Reseta as formatações prédefinidas dos navegadores*/
+    margin:0;
+    padding:0;
+    
+}
+/*Tag semantica do HTML, dentro dela temos o .container*/
+header {
+    display:flex; /*para dizer que é um flaxbox*/
+    flex-wrap:nowrap; /*para dizer que nao quebra linha*/
+    flex-direction:row;  /*para dizer que a direção é horizontal*/
+    justify-content:center; /*para alinhar os items no centro em direção ao row*/
+    height:120px;
+}
+
+
+.container {
+    width: 990px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:5px 10px 5px 20px;
+    margin-bottom:5px;
+}
+
+.imglogo{width:150px;}
+
+.menu{
+      display:flex;
+      align-items:center; /*alinhou os items que tao dentro do menu no centro, ao contrario do row*/
+}
+
+nav ul, nav li {
+    list-style:none; /*Remove as bolinhas dos itens da lista*/
+    margin:0;
+    padding:0;
+}
+
+nav ul{
+    display:flex; /*aplica o flex para tudo que tiver dentro do ul, assim eles ficam um ao lado do outro*/ 
+}
+nav a{
+    display:block; /*para que o conteudo possa ser auterado e fique do tamanho e onde eu quero*/
+    padding:15px;
+    text-decoration:none;/*para tirar o sublinhado do link*/
+    text-transform:uppercase; /*todas a letras do link vão ficar maiúsculas*/
+    color:#727272;
+    font-family:Arial;
+}
+
+nav .active a, nav a:hover { /*vai colocar um cor de fundo no link que tiver ativo, e tambem quando passar o mouse*/
+    background-color:#39aae1;
+    color:white;
+}
+
+.BannerTopo { /*container principal do banner*/
+    display:flex;/*que todos meus itens dentro da div banner_topo vao se auto ajustar e usar as configuracoes flaxbox*/
+    background-image: url('../images/banner.jpg');
+    background-position:center;
+    background-size:cover;/*minha imagem vai aumentar ou reduzir para ocupar todo o espaço da div sem se repetir*/
+    height:400px;
+    justify-content:center; /*o conteudo vai se alinha ao centro na horizontal*/
+    align-content:stretch; /*o conteudo vai ocupar todo o espaço na horizontal*/
+}
+
+.BannerConteudo{ /*div que está dentro do container*/
+    display:flex;
+    flex-direction:column;
+    color:red;
+}
+
+.BannerTexto{ /*div que eestá dentro do .BannerConteudo*/
+    flex:1;
+    display:flex;
+    align-items:center;
+}
+
+.Texto{ /*Div que está dentro do .BannerTexto*/
+    flex:1;
+}
+
+.Texto h1 {
+    color: white;
+    font-size: 40px;
+    text-shadow: 0px 1px 1px #555; /*sombra do texto*/
+    padding:0px 10px;
+    margin: 0;
+    max-width: 350px;
+}
+
+.Texto h2 {
+    color: white;
+    font-size: 15px;
+    text-shadow: 0px 1px 1px #555; /*sombra do texto*/
+    padding: 0px 10px;
+    margin: 0;
+    margin-top: 5px;
+    max-width: 350px;
+}
+
+.BannerOpcoes{ /*div que está dentro do .BannerConteudo*/
+    flex:1;
+    display:flex;
+    background-color:white;
+    max-width:990px;
+}
+
+.BannerOp1, .BannerOp2, .BannerOp3 {
+    flex:1;
+    color: white;
+    padding: 20px;
+    font-size:13px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.BannerOp1 {
+    background-color: #39aae1;
+}
+
+.BannerOp2 {
+    background-color: #0079c7;
+}
+
+.BannerOp1 a, .BannerOp2 a{
+    color:white;
+    border:1px solid #fff;
+    padding:5px;
+    text-decoration:none;
+    display:block;
+    width:30%;
+}
+
+.BannerOp3 {
+    background-color: #2b4c99;
+    display:flex;
+    flex-direction:column;
+    font-size: 12px;
+}
+
+.meiodesemana{
+    flex:1;
+    display:flex;
+    justify-content:space-between;
+}
+
+.sabado {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.domingo {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.geral{
+    display:flex;
+    justify-content:center;
+}
+
+.geral main {
+    flex:2;
+}
+
+.geral aside{
+    flex:1;
+}
+
+.widget {
+    padding: 10px 5px 0px 5px;
+}
+.widget_titulo{
+    font-size:17px;
+}
+.widget_sublinhado{
+    background-color:darkturquoise;
+    height:2px;
+    width:45px;
+    margin-top:0;
+}
+
+.widget_conteudo{
+    min-height:300px;
+    padding:10px 5px;
+    font-size:13px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:stretch;
+}
+
+.departamento {
+    background-color: #0079c7;
+    width: 120px;
+    height: 100px;
+    margin: 15px;
+}
+
+.consulta_contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 5px 0px 0px;
+    text-transform: capitalize;
+    font-size:13px;
+}
+
+.consulta_contatos_texto {
+    flex: 1;
+    margin-bottom:5px;
+}
+
+.icone_contatos{
+    height:15px;
+    margin:2px 2px -2px 2px;
+}
+
+.consulta_contatos a {
+    color:white;
+    background-color:lawngreen;
+    padding:5px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+article{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+.noticia {
+    max-width:300px;
+    min-width: 200px;
+    min-height: 300px;
+    margin: 10px;
+    margin-bottom:50px;
+}
+
+.data_comentario {
+    display: flex;
+    color:white;
+    font-weight:bold;
+}
+
+.data {
+    width: 90px;
+    background-color: #0079c7;
+    margin: 10px 3px 10px 0;
+    padding: 5px;
+}
+
+.comentario {
+    width: 30px;
+    background-color: #2b4c99;
+    padding: 5px;
+    margin: 10px 0px 10px 0;
+}
+
+.foto_noticia{
+    width:100%;
+    height:200px;
+}
+
+.foto_noticia img{
+    width:100%;
+    height:auto;
+}
+
+.noticia_titulo{
+    font-size:19px;
+}
+
+.noticia_descricao{
+    font-size:13px;
+    text-align:justify;
+}
+
+.rodape{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    background-color:black;
+    color:white;
+
+}
+
+.texto_rodape {
+    padding:10px;
+    width:990px;
+    background-color:black;
+}
+
+@media screen and (min-width:650px) and (max-width:990px) {
+    .geral main {
+        flex: 1;
+    }
+}
+
+@media screen and (min-width:413px) and (max-width:650px) {
+
+
+    .Texto {
+        margin: 20px;
+    }
+
+    .BannerOpcoes {
+        flex-direction: column;
+    }
+
+    .geral main {
+        margin-top: 180px;
+    }
+
+    .geral aside {
+        margin-top: 180px;
+    }
+
+    .widget_titulo {
+        margin-left: 10px;
+    }
+
+    .widget_sublinhado{
+        margin-left:10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 5px 5px 0 0;
+    }
+
+    header {
+        height: auto;
+    }
+
+    .imglogo {
+        height: 200px;
+        width: auto;
+        border: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:290px) and (max-width:412px) {
+    .Texto {
+        margin: 20px;
+    }
+
+    .BannerOpcoes {
+        flex-direction: column;
+    }
+
+    .geral aside {
+        display:none;
+    }
+
+    .geral main{
+        margin-top:200px;
+    }
+    nav ul {
+        
+        flex-direction:column;
+        margin:5px 5px 0 0;
+    }
+    header{
+        height:auto;
+    }
+
+    .imglogo{
+        height:200px;
+        width:auto;
+        border:0;
+        margin:0;
+    }
+}
